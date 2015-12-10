@@ -1,20 +1,18 @@
-#include <math.h>
+class Point;
 
 class Vector {
 public:
-	Vector(Point *end) {
-		this->end = end;
-		force = sqrt(pow(this->end->getX(), 2) + pow(this->end->getY(), 2) + pow(this->end->getZ(), 2));
-	};
+	Vector(Point *end);
 
-	Vector* operator+(Vector a) {
-		return new Vector(new Point(end->getX() + a.end->getX(), end->getY() + a.end->getY(), end->getZ() + a.end->getZ()));
-	}
+	Vector* operator+(Vector a);
 
-	int getXLength();
-	int getYLength();
-	int getZLength();
-//private:
+	float getXLength();
+	float getYLength();
+	float getZLength();
+	void setXLength(float x);
+	void setYLength(float y);
+	void setZLength(float z);
+private:
 	Point *end;
 	double force;
 };

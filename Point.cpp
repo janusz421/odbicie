@@ -1,38 +1,46 @@
 #include "Point.h"
+#include "Vector.h"
 
-void Point::setPoint(int x, int y, int z)
+void Point::setPoint(float x, float y, float z)
 {
 	this->x = x;
 	this->y = y;
 	this->z = z;
 }
 
-void Point::setX(int x)
+void Point::setX(float x)
 {
 	this->x = x;
 }
 
-void Point::setY(int y)
+void Point::setY(float y)
 {
 	this->y = y;
 }
 
-void Point::setZ(int z)
+void Point::setZ(float z)
 {
 	this->z = z;
 }
 
-int Point::getX()
+float Point::getX()
 {
 	return x;
 }
 
-int Point::getY()
+float Point::getY()
 {
 	return y;
 }
 
-int Point::getZ()
+float Point::getZ()
 {
 	return z;
+}
+
+void Point::movePoint(Vector moveVector)
+{
+	this->x += moveVector.getXLength();
+	this->y += moveVector.getYLength();
+	this->z += moveVector.getZLength();
 }

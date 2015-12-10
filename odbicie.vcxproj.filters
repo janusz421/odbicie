@@ -21,6 +21,9 @@
     <ClCompile Include="Point.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Point.h">
